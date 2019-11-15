@@ -1,0 +1,12 @@
+/accounts/login/              LoginR POST
+/accounts/                    SignUpR POST
+/accounts/password/change/    ChangePasswordR POST
+/accounts/password/reset/     ResetPasswordR POST
+/accounts/social/login/       SocialLoginR POST
+/accounts/refresh/            RefreshR POST
+
+/players/games/               GamesR GET
+/players/games/finished/      FinishedGamesR GET
+/players/games/postulable     PostulaleGamesR GET
+
+/add AddR  GET
