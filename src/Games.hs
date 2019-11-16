@@ -55,7 +55,7 @@ data Field = Field {
 
 data PlayerDetail = PlayerDetail {
     player_id :: Int
-    ,profile_name_url :: Text
+    ,profile_image_url :: Text
     ,is_captain :: Bool
     ,player_fullname :: Text
     ,team :: Text
@@ -98,11 +98,11 @@ instance ToJSON Player where
         "player" .= player
         ,"status" .= player_status
         ] 
-
+        
 instance ToJSON PlayerDetail where
     toJSON PlayerDetail {..} = object [
         "id" .= player_id
-        ,"profile_name_url" .= profile_name_url
+        ,"profile_image_url" .= profile_image_url
         ,"is_captain" .= is_captain
         ,"player_fullname" .= player_fullname
         ,"team" .= team
@@ -138,7 +138,7 @@ instance ToJSON Detail where
 instance ToJSON Games where
     toJSON Games {..} = object
         [ "previous" .= previous
-        , "result" .= results
+        , "results" .= results
         ,  "count" .= count
         ,  "next" .= next
         ]
@@ -146,14 +146,14 @@ instance ToJSON Games where
 instance ToJSON Players where
     toJSON Players {..} = object
         [ "previous" .= previous_players
-        , "result" .= results_players
+        , "results" .= results_players
         ,  "count" .= count_players
         ,  "next" .= next_players
         ]
 
 instance ToJSON Status where
     toJSON Status {..} = object
-        [ "status" .= code
+        [ "code" .= code
         ]
 
 
@@ -167,7 +167,7 @@ instance ToJSON Game where
 instance ToJSON Assets where
     toJSON Assets {..} = object
         [ "previous" .= previous_assets
-        , "result" .= results_assets
+        , "results" .= results_assets
         ,  "count" .= count_assets
         ,  "next" .= next_assets
         ]
@@ -178,11 +178,17 @@ age = Age 18 22
 genders_male = ["male"]
 genders_female = ["female"]
 genders_mix = ["mix"]
+
+status_unconfirmed = Status "unconfirmed"
 status_confirmed = Status "confirmed"
 status_declined = Status "confirmed"
 status_postulable = Status "postulable"
+status_postulated = Status "postulated"
 status_inviting = Status "inviting"
 status_canceled = Status "canceled"
+status_not_going = Status "notgoing"
+
+
 
 club_1 = Club 1 "Ortiz de Ocampo 1500" "Ocampo Futbol" "CABA"
 club_2 = Club 2 "Salguero 1500" "Salguero Futbol" "CABA"
@@ -225,10 +231,10 @@ gameDetail_finished_4 = Detail 1 age club_4 "2019-07-25 12:00:00 -0300" field_1 
 gameDetail_finished_5 = Detail 1 age club_1 "2019-07-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2]
 
 
-game_1 = Game status_inviting gameDetail_1
+game_1 = Game status_not_going gameDetail_1
 game_2 = Game status_confirmed gameDetail_2
-game_3 = Game status_canceled gameDetail_3
-game_4 = Game status_inviting gameDetail_4
+game_3 = Game status_postulated gameDetail_3
+game_4 = Game status_unconfirmed gameDetail_4
 game_5 = Game status_confirmed gameDetail_5
 
 game_finished_1 = Game status_confirmed gameDetail_finished_1
