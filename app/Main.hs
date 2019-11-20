@@ -3,4 +3,4 @@ import Foundation
 import Yesod.Core
 
 main :: IO ()
-main = warp 3001 App
+main = warp 3000 App
