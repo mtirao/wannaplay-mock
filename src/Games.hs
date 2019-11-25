@@ -243,11 +243,11 @@ game_finished_3 = Game status_confirmed gameDetail_finished_3
 game_finished_4 = Game status_confirmed gameDetail_finished_4
 game_finished_5 = Game status_confirmed gameDetail_finished_5
 
-game_postulable_1 = Game status_postulable gameDetail_finished_1
-game_postulable_2 = Game status_postulable gameDetail_finished_2
-game_postulable_3 = Game status_postulable gameDetail_finished_3
-game_postulable_4 = Game status_postulable gameDetail_finished_4
-game_postulable_5 = Game status_postulable gameDetail_finished_5
+game_postulable_1 = Game status_postulable gameDetail_1
+game_postulable_2 = Game status_postulable gameDetail_2
+game_postulable_3 = Game status_postulable gameDetail_3
+game_postulable_4 = Game status_postulable gameDetail_4
+game_postulable_5 = Game status_postulable gameDetail_5
 
 
 getGamesR  :: Handler Value

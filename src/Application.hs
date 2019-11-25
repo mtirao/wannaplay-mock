@@ -8,9 +8,8 @@ module Application where
 import Foundation
 import Yesod.Core
 
-import Add
 import Login
 import Games
-import Home
+import Fields
 
 mkYesodDispatch "App" resourcesApp
