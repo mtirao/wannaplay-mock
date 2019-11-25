@@ -1,20 +1,20 @@
-/accounts/login/              LoginR POST
-/accounts/                    SignUpR POST
-/accounts/password/change/    ChangePasswordR POST
-/accounts/password/reset/     ResetPasswordR POST
-/accounts/social/login/       SocialLoginR POST
-/accounts/refresh/            RefreshR POST
+/accounts/login              LoginR POST
+/accounts                    SignUpR POST
+/accounts/password/change    ChangePasswordR POST
+/accounts/password/reset     ResetPasswordR POST
+/accounts/social/login       SocialLoginR POST
+/accounts/refresh            RefreshR POST
 
-/players/games/                             GamesR GET
-/players/games/finished/                    FinishedGamesR GET
-/players/games/postulable/                  PostulaleGamesR GET
-!/players/games/#Int/                       GameDetailR GET
-/players/games/#Int/players/                GamePlayersR GET
-/players/#Int/games/#Int/team/              GameTeamR POST
-/players/games/#Int/color/                  GameColorR GET
-/players/#Int/games/#Int/confirm/           GameConfirmR POST
-/players/#Int/games/#Int/cancel/            GameCancelR POST
-/players/games/#Int/multimedia/             GameMutimediaR GET
+/players/games                             GamesR GET
+/players/games/finished                    FinishedGamesR GET
+/players/games/postulable                  PostulaleGamesR GET
+!/players/games/#Int                       GameDetailR GET
+/players/games/#Int/players                GamePlayersR GET
+/players/#Int/games/#Int/team              GameTeamR POST
+/players/games/#Int/color                  GameColorR GET
+/players/#Int/games/#Int/confirm           GameConfirmR POST
+/players/#Int/games/#Int/cancel            GameCancelR POST
+/players/games/#Int/multimedia             GameMutimediaR GET
 
 /players/fields/                            FieldsR GET
 

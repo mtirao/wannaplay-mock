@@ -128,7 +128,7 @@ instance ToJSON Detail where
         "id" .= game_id
         ,"age_range" .= age_range
         , "club" .= club
-        , "start_time" .= start_time
+        , "start_datetime" .= start_time
         , "field" .= field
         , "max_players" .= detail_max_players
         , "genders" .= genders
