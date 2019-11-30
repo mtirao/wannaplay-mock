@@ -11,5 +11,6 @@ import Yesod.Core
 import Login
 import Games
 import Fields
+import Friends
 
 mkYesodDispatch "App" resourcesApp

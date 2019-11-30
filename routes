@@ -16,5 +16,7 @@
 /players/#Int/games/#Int/cancel            GameCancelR POST
 /players/games/#Int/multimedia             GameMutimediaR GET
 
-/players/fields/                            FieldsR GET
+/players/friends                           FriendsR GET
+
+/players/fields/                           FieldsR GET
 
