@@ -92,14 +92,14 @@ instance ToJSON Club where
         ,"street_address" .= street_address
         ,"name" .= name
         ,"city" .= city
-        ] 
+        ]
 
 instance ToJSON Player where
     toJSON Player {..} = object [
         "player" .= player
         ,"status" .= player_status
-        ] 
-        
+        ]
+
 instance ToJSON PlayerDetail where
     toJSON PlayerDetail {..} = object [
         "id" .= player_id
@@ -125,7 +125,7 @@ instance ToJSON Age where
         ,"max" .= range_max_age
         ]
 
-instance ToJSON Detail where 
+instance ToJSON Detail where
     toJSON Detail {..} = object [
         "id" .= game_id
         ,"age_range" .= age_range
@@ -197,7 +197,7 @@ club_2 = Club 2 "Salguero 1500" "Salguero Futbol" "CABA"
 club_3 = Club 3 "Pedro Moran 3500" "Garden Futbol" "CABA"
 club_4 = Club 4 "Duarte Quiros 3500" "Belgrano Futbol" "Cordoba"
 
-field_1 = Field 1 1000 10 100 
+field_1 = Field 1 1000 10 100
 
 player_detail_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Marcos Agustin" "white" "Marcos" "marcos.tirao@icloud.com"
 player_detail_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Agustin Tirao" "black" "Agustin" "agustin.tirao@icloud.com"
@@ -260,6 +260,7 @@ getFinishedGamesR= returnJson $ Games "" [game_finished_1, game_finished_2, game
 
 getPostulaleGamesR  :: Handler Value
 getPostulaleGamesR = returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
+-- getPostulaleGamesR = returnJson $ Games "" [] 10 ""
 
 
 getGameDetailR :: Int -> Handler Value
