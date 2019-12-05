@@ -75,7 +75,7 @@ data Detail = Detail {
     ,start_time :: Text
     ,field :: Field
     ,detail_max_players :: Int
-    ,genders :: [Text]
+    ,genders :: Text
     ,players :: [Player]
     }
 
@@ -177,9 +177,9 @@ instance ToJSON Assets where
 
 
 age = Age 18 22
-genders_male = ["male"]
-genders_female = ["female"]
-genders_mix = ["mix"]
+genders_male = "male"
+genders_female = "female"
+genders_mix = "mix"
 
 status_unconfirmed = Status "unconfirmed"
 status_confirmed = Status "confirmed"
