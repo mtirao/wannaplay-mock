@@ -187,7 +187,7 @@ status_declined = Status "confirmed"
 status_postulable = Status "postulable"
 status_postulated = Status "postulated"
 status_inviting = Status "inviting"
-status_canceled = Status "canceled"
+status_canceled = Status "cancelled"
 status_not_going = Status "notgoing"
 
 
