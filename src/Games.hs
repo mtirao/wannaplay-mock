@@ -219,12 +219,15 @@ player_6 =  Player player_detail_6 status_declined
 player_7 =  Player player_detail_7 status_confirmed
 player_8 =  Player player_detail_8 status_confirmed
 player_9 =  Player player_detail_9 status_confirmed
+player_10 =  Player player_detail_1 status_postulated
 
 gameDetail_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4]
 gameDetail_2 = Detail 1 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
 gameDetail_3 = Detail 1 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9]
 gameDetail_4 = Detail 1 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
 gameDetail_5 = Detail 1 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2]
+gameDetail_6 = Detail 1 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4]
+
 
 gameDetail_finished_1 = Detail 1 age club_1 "2019-07-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4]
 gameDetail_finished_2 = Detail 1 age club_2 "2019-07-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
@@ -251,6 +254,7 @@ game_postulable_3 = Game status_postulable gameDetail_3
 game_postulable_4 = Game status_postulable gameDetail_4
 game_postulable_5 = Game status_postulable gameDetail_5
 
+game_postulated_1 = Game status_inviting gameDetail_6
 
 getGamesR  :: Handler Value
 getGamesR = returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 ""
@@ -269,17 +273,20 @@ getGameDetailR   game_id = returnJson $ game_1
 getGamePlayersR :: Int -> Handler Value
 getGamePlayersR game_id = returnJson $ Players "" [player_1, player_2, player_3, player_4] 10 ""
 
-postGameTeamR :: Int -> Int -> Handler Value
-postGameTeamR game_id player_id = returnJson $ player_1
+patchGameTeamR :: Int -> Int -> Handler Value
+patchGameTeamR game_id player_id = returnJson $ player_1
 
 getGameColorR :: Int -> Handler Value
 getGameColorR game_id = returnJson $ game_1
 
-postGameConfirmR :: Int -> Int -> Handler Value
-postGameConfirmR game_id player_id = returnJson $ game_1
+patchGameConfirmR :: Int -> Int -> Handler Value
+patchGameConfirmR game_id player_id = returnJson $ game_1
 
-postGameCancelR :: Int -> Int -> Handler Value
-postGameCancelR  game_id player_id = returnJson $ game_1
+patchGameCancelR :: Int -> Int -> Handler Value
+patchGameCancelR game_id player_id = returnJson $ game_1
 
 getGameMutimediaR :: Int -> Handler Value
 getGameMutimediaR game_id = returnJson $ Assets "" ["https://image.shutterstock.com/image-vector/soccer-player-ball-stadium-light-600w-731216308.jpg","https://image.shutterstock.com/image-vector/soccer-player-ball-stadium-light-600w-731216308.jpg"] 10 ""
+
+patchGamePostulatedR :: Int -> Handler Value 
+patchGamePostulatedR game_id = returnJson $ game_postulated_1
