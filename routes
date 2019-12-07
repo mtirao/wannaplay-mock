@@ -21,6 +21,8 @@
 !/players/games/postulate/#Int             GamePostulatedR PATCH
 
 /players/friends                           FriendsR GET
+/players/suggested                         SuggestedR GET
+/players/players                           PlayersR GET
 
 /players/fields/                           FieldsR GET
 
