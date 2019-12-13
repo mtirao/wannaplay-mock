@@ -257,15 +257,36 @@ game_postulable_5 = Game status_postulable gameDetail_5
 game_postulated_1 = Game status_inviting gameDetail_6
 
 getGamesR  :: Handler Value
-getGamesR = returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 ""
+getGamesR = do 
+    pageValueMaybe <- lookupGetParam "page"
+    case pageValueMaybe of
+        Nothing -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 ""
+        Just page -> case page of
+            "0" -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games?page=1"
+            "1" -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games?page=2"
+            "2" -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 ""
+            
 
 getFinishedGamesR  :: Handler Value
-getFinishedGamesR= returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 ""
+getFinishedGamesR= do 
+        pageValueMaybe <- lookupGetParam "page"
+        case pageValueMaybe of
+            Nothing -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 ""
+            Just page -> case page of
+                "0" -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/finished?page=1"
+                "1" -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/finished?page=2"
+                "2" -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 ""
+
 
 getPostulaleGamesR  :: Handler Value
-getPostulaleGamesR = returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
--- getPostulaleGamesR = returnJson $ Games "" [] 10 ""
-
+getPostulaleGamesR = do
+    pageValueMaybe <- lookupGetParam "page"
+    case pageValueMaybe of
+        Nothing -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
+        Just page -> case page of
+            "0" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/postulable?page=1"
+            "1" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/postulable?page=2"
+            "2" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
 
 getGameDetailR :: Int -> Handler Value
 getGameDetailR   game_id = returnJson $ game_1
