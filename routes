@@ -25,4 +25,5 @@
 /players/players                           PlayersR GET
 
 /players/fields/                           FieldsR GET
+/players/games/filter                      GameFilterR GET
 

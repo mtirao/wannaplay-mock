@@ -290,3 +290,6 @@ getGameMutimediaR game_id = returnJson $ Assets "" ["https://image.shutterstock.
 
 patchGamePostulatedR :: Int -> Handler Value 
 patchGamePostulatedR game_id = returnJson $ game_postulated_1
+
+getGameFilterR :: Handler Value 
+getGameFilterR = returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
