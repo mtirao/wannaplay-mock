@@ -286,6 +286,7 @@ getGamesR = do
             "0" -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games?page=1"
             "1" -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games?page=2"
             "2" -> returnJson $ Games "" [game_1, game_2, game_3, game_4, game_5] 10 ""
+            _ -> returnJson $ Games "" [] 0 ""
             
 
 getFinishedGamesR  :: Handler Value
@@ -297,6 +298,8 @@ getFinishedGamesR= do
                 "0" -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/finished?page=1"
                 "1" -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/finished?page=2"
                 "2" -> returnJson $ Games "" [game_finished_1, game_finished_2, game_finished_3, game_finished_4, game_finished_5] 10 ""
+                _ -> returnJson $ Games "" [] 0 ""
+
 
 
 getPostulaleGamesR  :: Handler Value
@@ -308,7 +311,7 @@ getPostulaleGamesR = do
             "0" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/postulable?page=1"
             "1" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/postulable?page=2"
             "2" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
-            _ -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
+            _ -> returnJson $ Games "" [] 10 ""
 
 getGameDetailR :: Int -> Handler Value
 getGameDetailR   game_id = returnJson $ game_1
