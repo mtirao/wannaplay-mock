@@ -18,7 +18,13 @@
 /players/#Int/games/#Int/team              GameTeamR PATCH
 /players/#Int/games/#Int/confirm           GameConfirmR PATCH
 /players/#Int/games/#Int/cancel            GameCancelR PATCH
-!/players/games/postulate/#Int             GamePostulatedR PATCH
+/players/#Int/games/#Int/postulate         GamePostulateR PATCH
+
+/players/game/create                       GameCreateR POST
+
+!/players/games/#Int/confirm               GameOwnConfirmR PATCH
+!/players/games/#Int/cancel                GameOwnCancelR PATCH
+!/players/games/postulate/#Int             GameOwnPostulatedR PATCH
 
 /players/friends                           FriendsR GET
 /players/suggested                         SuggestedR GET

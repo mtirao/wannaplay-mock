@@ -183,12 +183,13 @@ genders_mix = "mix"
 
 status_unconfirmed = Status "unconfirmed"
 status_confirmed = Status "confirmed"
-status_declined = Status "confirmed"
+status_declined = Status "declined"
 status_postulable = Status "postulable"
 status_postulated = Status "postulated"
 status_inviting = Status "inviting"
 status_canceled = Status "cancelled"
 status_not_going = Status "notgoing"
+status_invited = Status "invited"
 
 
 
@@ -210,7 +211,10 @@ player_detail_8 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wann
 player_detail_9 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Alejandro Fernandez" "black" "Alejandro" "ale.fernandez@icloud.com"
 
 
-player_1 =  Player player_detail_1 status_confirmed
+player_1 =  Player player_detail_1 status_postulated
+
+player_confirmed_1 =  Player player_detail_1 status_confirmed
+
 player_2 =  Player player_detail_2 status_confirmed
 player_3 =  Player player_detail_3 status_confirmed
 player_4 =  Player player_detail_4 status_declined
@@ -222,11 +226,23 @@ player_9 =  Player player_detail_9 status_confirmed
 player_10 =  Player player_detail_1 status_postulated
 
 gameDetail_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4]
-gameDetail_2 = Detail 1 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
-gameDetail_3 = Detail 1 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9]
-gameDetail_4 = Detail 1 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
-gameDetail_5 = Detail 1 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2]
-gameDetail_6 = Detail 1 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4]
+gameDetail_2 = Detail 2 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
+gameDetail_3 = Detail 3 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9]
+gameDetail_4 = Detail 4 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
+gameDetail_5 = Detail 5 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2]
+gameDetail_6 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4]
+gameDetail_7 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_confirmed_1]
+
+
+gameDetail_postulable_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_5, player_2, player_3, player_4]
+gameDetail_postulable_2 = Detail 2 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
+gameDetail_postulable_3 = Detail 3 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_7, player_8, player_9]
+gameDetail_postulable_4 = Detail 4 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
+gameDetail_postulable_5 = Detail 5 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_3, player_2]
+gameDetail_postulable_6 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4]
+
+
+gameDetail_confirm_3 = Detail 1 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_confirmed_1, player_8, player_9]
 
 
 gameDetail_finished_1 = Detail 1 age club_1 "2019-07-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4]
@@ -241,6 +257,11 @@ game_2 = Game status_confirmed gameDetail_2
 game_3 = Game status_inviting gameDetail_3
 game_4 = Game status_inviting gameDetail_4
 game_5 = Game status_confirmed gameDetail_5
+game_6 = Game status_inviting gameDetail_7
+
+
+game_confirm_3 = Game status_inviting gameDetail_confirm_3
+
 
 game_finished_1 = Game status_confirmed gameDetail_finished_1
 game_finished_2 = Game status_confirmed gameDetail_finished_2
@@ -248,11 +269,11 @@ game_finished_3 = Game status_confirmed gameDetail_finished_3
 game_finished_4 = Game status_confirmed gameDetail_finished_4
 game_finished_5 = Game status_confirmed gameDetail_finished_5
 
-game_postulable_1 = Game status_postulable gameDetail_1
-game_postulable_2 = Game status_postulable gameDetail_2
-game_postulable_3 = Game status_postulable gameDetail_3
-game_postulable_4 = Game status_postulable gameDetail_4
-game_postulable_5 = Game status_postulable gameDetail_5
+game_postulable_1 = Game status_postulable gameDetail_postulable_1
+game_postulable_2 = Game status_postulable gameDetail_postulable_2
+game_postulable_3 = Game status_postulable gameDetail_postulable_3
+game_postulable_4 = Game status_postulable gameDetail_postulable_4
+game_postulable_5 = Game status_postulable gameDetail_postulable_5
 
 game_postulated_1 = Game status_inviting gameDetail_6
 
@@ -287,6 +308,7 @@ getPostulaleGamesR = do
             "0" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/postulable?page=1"
             "1" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/postulable?page=2"
             "2" -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
+            _ -> returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
 
 getGameDetailR :: Int -> Handler Value
 getGameDetailR   game_id = returnJson $ game_1
@@ -306,6 +328,9 @@ patchGameConfirmR game_id player_id = returnJson $ game_1
 patchGameCancelR :: Int -> Int -> Handler Value
 patchGameCancelR game_id player_id = returnJson $ game_1
 
+patchGamePostulateR :: Int -> Int -> Handler Value
+patchGamePostulateR game_id player_id = returnJson $ game_1
+
 getGameMutimediaR :: Int -> Handler Value
 getGameMutimediaR game_id = returnJson $ Assets "" ["https://image.shutterstock.com/image-vector/soccer-player-ball-stadium-light-600w-731216308.jpg","https://image.shutterstock.com/image-vector/soccer-player-ball-stadium-light-600w-731216308.jpg"] 10 ""
 
@@ -314,3 +339,15 @@ patchGamePostulatedR game_id = returnJson $ game_postulated_1
 
 getGameFilterR :: Handler Value 
 getGameFilterR = returnJson $ Games "" [game_postulable_1, game_postulable_2, game_postulable_3, game_postulable_4, game_postulable_5] 10 ""
+
+patchGameOwnConfirmR :: Int -> Handler Value
+patchGameOwnConfirmR game_id = returnJson $ game_confirm_3
+
+patchGameOwnCancelR :: Int -> Handler Value
+patchGameOwnCancelR game_id = returnJson $ game_3
+
+patchGameOwnPostulatedR :: Int -> Handler Value
+patchGameOwnPostulatedR game_id = returnJson $ game_3
+
+postGameCreateR :: Handler Value
+postGameCreateR = returnJson $ game_3
