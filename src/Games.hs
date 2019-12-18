@@ -77,6 +77,7 @@ data Detail = Detail {
     ,detail_max_players :: Int
     ,genders :: Text
     ,players :: [Player]
+    ,created_by :: Text
     }
 
 data Assets = Assets {
@@ -135,6 +136,7 @@ instance ToJSON Detail where
         , "max_players" .= detail_max_players
         , "genders" .= genders
         , "players" .= players
+        , "created_by" .= created_by
         ]
 
 instance ToJSON Games where
@@ -211,45 +213,45 @@ player_detail_8 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wann
 player_detail_9 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Alejandro Fernandez" "black" "Alejandro" "ale.fernandez@icloud.com"
 
 
-player_1 =  Player player_detail_1 status_postulated
+player_1 =  Player player_detail_1 status_confirmed
 
 player_confirmed_1 =  Player player_detail_1 status_confirmed
 
-player_2 =  Player player_detail_2 status_confirmed
-player_3 =  Player player_detail_3 status_confirmed
+player_2 =  Player player_detail_2 status_invited
+player_3 =  Player player_detail_3 status_postulated
 player_4 =  Player player_detail_4 status_declined
-player_5 =  Player player_detail_5 status_declined
+player_5 =  Player player_detail_5 status_confirmed
 player_6 =  Player player_detail_6 status_declined
-player_7 =  Player player_detail_7 status_confirmed
+player_7 =  Player player_detail_7 status_declined
 player_8 =  Player player_detail_8 status_confirmed
 player_9 =  Player player_detail_9 status_confirmed
 player_10 =  Player player_detail_1 status_postulated
 
-gameDetail_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4]
-gameDetail_2 = Detail 2 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
-gameDetail_3 = Detail 3 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9]
-gameDetail_4 = Detail 4 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
-gameDetail_5 = Detail 5 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2]
-gameDetail_6 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4]
-gameDetail_7 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_confirmed_1]
+gameDetail_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4] "marcos.tirao@icloud.com"
+gameDetail_2 = Detail 2 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_7] "agustin.tirao@icloud.com"
+gameDetail_3 = Detail 3 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9] "marcos.tirao@icloud.com"
+gameDetail_4 = Detail 4 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4] "ale.fernandez@icloud.com"
+gameDetail_5 = Detail 5 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2] "marcos.tirao@icloud.com"
+gameDetail_6 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4] "marcos.tirao@icloud.com"
+gameDetail_7 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_confirmed_1] "ale.fernandez@icloud.com"
 
 
-gameDetail_postulable_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_5, player_2, player_3, player_4]
-gameDetail_postulable_2 = Detail 2 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
-gameDetail_postulable_3 = Detail 3 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_7, player_8, player_9]
-gameDetail_postulable_4 = Detail 4 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
-gameDetail_postulable_5 = Detail 5 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_3, player_2]
-gameDetail_postulable_6 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4]
+gameDetail_postulable_1 = Detail 1 age club_1 "2030-08-22 12:00:00 -0300" field_1 10 genders_male [player_5, player_2, player_3, player_4] "marcos.tirao@icloud.com"
+gameDetail_postulable_2 = Detail 2 age club_2 "2030-08-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7] "marcos.tirao@icloud.com"
+gameDetail_postulable_3 = Detail 3 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_7, player_8, player_9] "agustin.tirao@icloud.com"
+gameDetail_postulable_4 = Detail 4 age club_4 "2030-08-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4] "marcos.tirao@icloud.com"
+gameDetail_postulable_5 = Detail 5 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_3, player_2] "ale.fernandez@icloud.com"
+gameDetail_postulable_6 = Detail 6 age club_1 "2030-08-26 12:00:00 -0300" field_1 10 genders_male [player_10, player_2, player_3, player_4] "marcos.tirao@icloud.com"
 
 
-gameDetail_confirm_3 = Detail 1 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_confirmed_1, player_8, player_9]
+gameDetail_confirm_3 = Detail 1 age club_3 "2030-08-24 12:00:00 -0300" field_1 10 genders_male [player_confirmed_1, player_8, player_9] "marcos.tirao@icloud.com"
 
 
-gameDetail_finished_1 = Detail 1 age club_1 "2019-07-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4]
-gameDetail_finished_2 = Detail 1 age club_2 "2019-07-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7]
-gameDetail_finished_3 = Detail 1 age club_3 "2019-07-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9]
-gameDetail_finished_4 = Detail 1 age club_4 "2019-07-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4]
-gameDetail_finished_5 = Detail 1 age club_1 "2019-07-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2]
+gameDetail_finished_1 = Detail 1 age club_1 "2019-07-22 12:00:00 -0300" field_1 10 genders_male [player_1, player_2, player_3, player_4] "marcos.tirao@icloud.com"
+gameDetail_finished_2 = Detail 1 age club_2 "2019-07-23 12:00:00 -0300" field_1 10 genders_male [player_2, player_3, player_7] "marcos.tirao@icloud.com"
+gameDetail_finished_3 = Detail 1 age club_3 "2019-07-24 12:00:00 -0300" field_1 10 genders_male [player_1, player_8, player_9] "ale.fernandez@icloud.com"
+gameDetail_finished_4 = Detail 1 age club_4 "2019-07-25 12:00:00 -0300" field_1 10 genders_male [player_9, player_5, player_4] "agustin.tirao@icloud.com"
+gameDetail_finished_5 = Detail 1 age club_1 "2019-07-26 12:00:00 -0300" field_1 10 genders_male [player_1, player_2] "marcos.tirao@icloud.com"
 
 
 game_1 = Game status_canceled gameDetail_1
