@@ -24,7 +24,7 @@
 
 !/players/games/#Int/confirm               GameOwnConfirmR PATCH
 !/players/games/#Int/cancel                GameOwnCancelR PATCH
-!/players/games/postulate/#Int             GameOwnPostulatedR PATCH
+!/players/games/#Int/postulate             GameOwnPostulatedR PATCH
 
 /players/friends                           FriendsR GET
 /players/suggested                         SuggestedR GET
