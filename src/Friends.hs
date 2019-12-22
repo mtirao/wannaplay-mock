@@ -10,7 +10,9 @@ module Friends where
 import Foundation
 import Data.Text (Text)
 import Yesod.Core
-import Games
+import Games.Types
+import Games.Json
+import Games.Helper
 
 data Friends = Friends
     { previous_friends :: Text

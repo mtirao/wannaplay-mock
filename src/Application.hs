@@ -9,7 +9,7 @@ import Foundation
 import Yesod.Core
 
 import Login
-import Games
+import Games.Games
 import Fields
 import Friends
 
