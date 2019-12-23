@@ -17,6 +17,7 @@
 
 /players/#Int/games/#Int/team              GameTeamR PATCH
 /players/#Int/games/#Int/confirm           GameConfirmR PATCH
+/players/#Int/games/#Int/captain           GameCaptainR PATCH
 /players/#Int/games/#Int/cancel            GameCancelR PATCH
 /players/#Int/games/#Int/postulate         GamePostulateR PATCH
 

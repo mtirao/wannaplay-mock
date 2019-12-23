@@ -94,3 +94,7 @@ patchGameOwnPostulatedR game_id = returnJson $ game_3
 
 postGameCreateR :: Handler Value
 postGameCreateR = returnJson $ game_3
+
+
+patchGameCaptainR :: Int -> Int -> Handler Value
+patchGameCaptainR game_id player_id = returnJson $ game_1
