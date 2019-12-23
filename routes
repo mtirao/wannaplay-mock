@@ -34,3 +34,4 @@
 /players/fields/                           FieldsR GET
 /players/games/filter                      GameFilterR GET
 
+/players/fields/time/#Int              TimesR GET

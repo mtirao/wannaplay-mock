@@ -76,7 +76,18 @@ instance ToJSON Field  where
         , "id" .= id
         ]
 
+data Time = Time 
+    { available_time :: [Text]
+    }
+
+instance ToJSON Time  where
+    toJSON Time {..} = object
+        [ "available_time" .= available_time
+        ]
+
 sport_1 =  FieldType "Soccer" [5,6,7,8,9,10]
+
+time_1 = Time ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
 
 amenities_1 = ["Cesped", "Sintetico", "Techada",  "Iluminicion"]
 
@@ -94,3 +105,6 @@ field_7 = Field "El Protrero Soccer 7" "Belgrano, CABA." "Av. Belgrano 4000" "11
 
 getFieldsR  :: Handler Value
 getFieldsR  = returnJson $ Fields "" [field_1, field_2, field_3, field_4, field_5, field_6, field_7] 10 ""
+
+getTimesR  :: Int -> Handler Value
+getTimesR _ = returnJson $ time_1
