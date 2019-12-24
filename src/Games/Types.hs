@@ -10,6 +10,7 @@ module Games.Types where
 import Foundation
 import Data.Text (Text)
 import Yesod.Core
+import Fields.Types
 
 data Games = Games
     { previous :: Text
@@ -44,9 +45,10 @@ data Club = Club {
     ,street_address :: Text
     ,name :: Text
     ,city :: Text
+    ,location :: Location
     }
 
-data Field = Field {
+data FieldObj = FieldObj {
     field_id :: Int
     ,total_amount :: Int
     ,max_players :: Int
@@ -73,7 +75,7 @@ data Detail = Detail {
     ,age_range :: Age
     ,club :: Club
     ,start_time :: Text
-    ,field :: Field
+    ,field :: FieldObj
     ,detail_max_players :: Int
     ,genders :: Text
     ,players :: [Player]

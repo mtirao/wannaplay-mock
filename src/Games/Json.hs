@@ -11,6 +11,8 @@ import Games.Types
 import Foundation
 import Data.Text (Text)
 import Yesod.Core
+import Fields.Types
+import Fields.Json
 
 
 instance ToJSON Club where
@@ -19,6 +21,7 @@ instance ToJSON Club where
         ,"street_address" .= street_address
         ,"name" .= name
         ,"city" .= city
+        ,"location" .= location
         ]
 
 instance ToJSON Player where
@@ -38,8 +41,8 @@ instance ToJSON PlayerDetail where
         ,"username" .= username
         ]
 
-instance ToJSON Field where
-    toJSON Field {..} = object [
+instance ToJSON FieldObj where
+    toJSON FieldObj {..} = object [
         "id" .= field_id
         ,"total_amount" .= total_amount
         ,"max_players" .= max_players

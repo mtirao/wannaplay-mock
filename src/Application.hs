@@ -10,7 +10,7 @@ import Yesod.Core
 
 import Login
 import Games.Games
-import Fields
+import Fields.Fields
 import Friends
 
 mkYesodDispatch "App" resourcesApp
