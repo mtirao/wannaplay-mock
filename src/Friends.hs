@@ -30,21 +30,21 @@ instance ToJSON Friends where
         ]
 
 
-player_detail_player_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Marcos Player" "white" "Marcos" "marcos.tirao@icloud.com"
-player_detail_player_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Agustin Player" "black" "Agustin" "agustin.tirao@icloud.com"
-player_detail_player_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Juan Player" "white" "Juan" "juan.perez@icloud.com"
-player_detail_player_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Federico Player" "black" "Federico" "fede.gomez@icloud.com"
-player_detail_player_5 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True "Fernando Player" "black" "Fernando" "fer.penna@icloud.com"
-player_detail_player_6 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True "Fabio Player" "white" "Fabio" "fabio.perez@icloud.com"
-player_detail_player_7 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Alejandro Player" "black" "Alejandro" "ale.fernandez@icloud.com"
+player_detail_player_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Marcos Player" "white" "Marcos" "marcos.tirao@icloud.com"
+player_detail_player_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Agustin Player" "black" "Agustin" "agustin.tirao@icloud.com"
+player_detail_player_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Juan Player" "white" "Juan" "juan.perez@icloud.com"
+player_detail_player_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Federico Player" "black" "Federico" "fede.gomez@icloud.com"
+player_detail_player_5 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fernando Player" "black" "Fernando" "fer.penna@icloud.com"
+player_detail_player_6 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fabio Player" "white" "Fabio" "fabio.perez@icloud.com"
+player_detail_player_7 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Alejandro Player" "black" "Alejandro" "ale.fernandez@icloud.com"
 
-player_detail_suggest_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Marcos Suggest" "white" "Marcos" "marcos.tirao@icloud.com"
-player_detail_suggest_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Agustin Suggest" "black" "Agustin" "agustin.tirao@icloud.com"
-player_detail_suggest_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Juan Suggest" "white" "Juan" "juan.perez@icloud.com"
-player_detail_suggest_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Federico Suggest" "black" "Federico" "fede.gomez@icloud.com"
-player_detail_suggest_5 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True "Fernando Suggest" "black" "Fernando" "fer.penna@icloud.com"
-player_detail_suggest_6 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True "Fabio Suggest" "white" "Fabio" "fabio.perez@icloud.com"
-player_detail_suggest_7 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False "Alejandro Suggest" "black" "Alejandro" "ale.fernandez@icloud.com"
+player_detail_suggest_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Marcos Suggest" "white" "Marcos" "marcos.tirao@icloud.com"
+player_detail_suggest_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Agustin Suggest" "black" "Agustin" "agustin.tirao@icloud.com"
+player_detail_suggest_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Juan Suggest" "white" "Juan" "juan.perez@icloud.com"
+player_detail_suggest_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Federico Suggest" "black" "Federico" "fede.gomez@icloud.com"
+player_detail_suggest_5 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True False "Fernando Suggest" "black" "Fernando" "fer.penna@icloud.com"
+player_detail_suggest_6 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True False "Fabio Suggest" "white" "Fabio" "fabio.perez@icloud.com"
+player_detail_suggest_7 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Alejandro Suggest" "black" "Alejandro" "ale.fernandez@icloud.com"
 
 
 player_player_1 =  Player player_detail_player_1 status_confirmed

@@ -35,6 +35,7 @@ instance ToJSON PlayerDetail where
         "id" .= player_id
         ,"profile_image_url" .= profile_image_url
         ,"is_captain" .= is_captain
+        ,"is_friend" .= is_friend
         ,"player_fullname" .= player_fullname
         ,"team" .= team
         ,"first_name" .= first_name

@@ -59,6 +59,7 @@ data PlayerDetail = PlayerDetail {
     player_id :: Int
     ,profile_image_url :: Text
     ,is_captain :: Bool
+    ,is_friend :: Bool
     ,player_fullname :: Text
     ,team :: Text
     ,first_name :: Text
