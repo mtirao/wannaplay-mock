@@ -60,7 +60,7 @@ data PlayerDetail = PlayerDetail {
     ,profile_image_url :: Text
     ,is_captain :: Bool
     ,is_friend :: Bool
-    ,player_fullname :: Text
+    ,last_name :: Text
     ,team :: Text
     ,first_name :: Text
     ,username :: Text

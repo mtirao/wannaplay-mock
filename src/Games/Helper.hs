@@ -38,15 +38,15 @@ club_4 = Club 4 "Duarte Quiros 3500" "Belgrano Futbol" "Cordoba" $ Location (-34
 
 field_1 = FieldObj 1 1000 10 100
 
-player_detail_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Marcos Agustin" "white" "Marcos" "marcos.tirao@icloud.com"
-player_detail_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Agustin Tirao" "black" "Agustin" "agustin.tirao@icloud.com"
-player_detail_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Juan Perez" "white" "Juan" "juan.perez@icloud.com"
-player_detail_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Federico Gomez" "black" "Federico" "fede.gomez@icloud.com"
-player_detail_5 = PlayerDetail 5 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Marcos Agustin" "white" "Marcos" "marcos.tirao@icloud.com"
-player_detail_6 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fernando Penna" "black" "Fernando" "fer.penna@icloud.com"
-player_detail_7 = PlayerDetail 7 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Agustin Tirao" "black" "Agustin" "agustin.tirao@icloud.com"
-player_detail_8 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fabio Perez" "white" "Fabio" "fabio.perez@icloud.com"
-player_detail_9 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Alejandro Fernandez" "black" "Alejandro" "ale.fernandez@icloud.com"
+player_detail_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Tirao" "white" "Marcos" "marcos.tirao@icloud.com"
+player_detail_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Tirao" "black" "Agustin" "agustin.tirao@icloud.com"
+player_detail_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Perez" "white" "Juan" "juan.perez@icloud.com"
+player_detail_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Gomez" "black" "Federico" "fede.gomez@icloud.com"
+player_detail_5 = PlayerDetail 5 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fernandez" "white" "Marcos" "marcos.tirao@icloud.com"
+player_detail_6 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Penna" "black" "Fernando" "fer.penna@icloud.com"
+player_detail_7 = PlayerDetail 7 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Tirao" "black" "Agustin" "agustin.tirao@icloud.com"
+player_detail_8 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Perez" "white" "Fabio" "fabio.perez@icloud.com"
+player_detail_9 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Fernandez" "black" "Alejandro" "ale.fernandez@icloud.com"
 
 
 player_1 =  Player player_detail_1 status_confirmed
