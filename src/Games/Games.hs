@@ -62,8 +62,8 @@ getGamePlayersR game_id = returnJson $ Players "" [player_1, player_2, player_3,
 patchGameTeamR :: Int -> Int -> Handler Value
 patchGameTeamR game_id player_id = returnJson $ player_1
 
-getGameColorR :: Int -> Handler Value
-getGameColorR game_id = returnJson $ game_1
+patchGameColorR :: Int -> Handler Value
+patchGameColorR game_id = returnJson $ game_1
 
 patchGameConfirmR :: Int -> Int -> Handler Value
 patchGameConfirmR game_id player_id = returnJson $ game_1

@@ -12,7 +12,7 @@
 !/players/games/#Int                       GameDetailR GET
 /players/games/#Int/players                GamePlayersR GET
 
-/players/games/#Int/color                  GameColorR GET
+/players/games/#Int/color                  GameColorR PATCH
 /players/games/#Int/multimedia             GameMutimediaR GET
 
 /players/#Int/games/#Int/team              GameTeamR PATCH
