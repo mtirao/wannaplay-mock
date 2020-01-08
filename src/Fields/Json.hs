@@ -24,6 +24,7 @@ instance ToJSON Field  where
         , "field_type" .= field_type
         , "score" .= score
         , "id" .= id
+        , "location" .= location
         ]
 
 instance ToJSON Time  where
