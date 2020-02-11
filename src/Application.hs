@@ -12,5 +12,6 @@ import Login
 import Games.Games
 import Fields.Fields
 import Friends
+import Profile
 
 mkYesodDispatch "App" resourcesApp
