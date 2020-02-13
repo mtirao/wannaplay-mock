@@ -11,9 +11,9 @@ import Foundation
 import Data.Text (Text)
 import Yesod.Core
 
-data Score = Score {
-    value :: Double
-    text :: Text
+data Score = Score 
+    {value :: Double
+    , text :: Text
 }
 
 data Profile = Profile
@@ -57,18 +57,23 @@ instance ToJSON Profile where
         , "picture" .= picture
         , "location" .= location
         , "bio" .= bio
-        , "shareLocation" .= shareLocation
+        , "share_location" .= shareLocation
         , "score" .= score
         , "games" .= games
         , "speed" .= speed
         , "strength" .= strength
-        , "players" .= 
+        , "players" .= players
         , "control" .= control
         , "fair_play" .= fair_play
-    ]
+        ]
 
-profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "" ""
+score_1 = Score 4.3 "advanced"
+
+profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "man" "" "" "" True score_1 5 5 5 5 5 5
 
 getProfileR  :: Handler Value
-getProfileR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890"
+getProfileR = returnJson $ profile
+
+putProfileR  :: Handler Value
+putProfileR = returnJson $ profile
 
