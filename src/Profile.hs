@@ -69,7 +69,7 @@ instance ToJSON Profile where
 
 score_1 = Score 4.3 "advanced"
 
-profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "man" "" "" "" True score_1 5 5 5 5 5 5
+profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
 
 getProfileR  :: Handler Value
 getProfileR = returnJson $ profile
