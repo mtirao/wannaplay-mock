@@ -54,7 +54,7 @@ instance ToJSON Profile where
         , "mobile" .= mobile
         , "birthdate" .= birthdate
         , "gender" .= gender
-        , "picture" .= picture
+        , "profile_image_url" .= picture
         , "location" .= location
         , "bio" .= bio
         , "share_location" .= shareLocation
