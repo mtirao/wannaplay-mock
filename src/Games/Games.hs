@@ -53,6 +53,17 @@ getPostulaleGamesR = do
             "2" -> returnJson $ listGames games status_postulable "" 
             _ -> returnJson $ listGames [] status_postulable ""
 
+getInviteGamesR :: Int -> Handler Value
+getInviteGamesR player = do 
+    pageValueMaybe <- lookupGetParam "page"
+    case pageValueMaybe of
+        Nothing -> returnJson $ listGames games status_inviting ""
+        Just page -> case page of
+            "0" -> returnJson $ listGames games status_inviting "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/invite?page=1" 
+            "1" -> returnJson $ listGames games status_inviting "http://ec2-18-191-142-90.us-east-2.compute.amazonaws.com:3000/players/games/invite?page=2" 
+            "2" -> returnJson $ listGames games status_inviting "" 
+            _ -> returnJson $ listGames [] status_inviting ""
+
 getGameDetailR :: Int -> Handler Value
 getGameDetailR   game_id = returnJson $ game_1
 

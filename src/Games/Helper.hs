@@ -28,7 +28,7 @@ status_canceled = Status "cancelled"
 status_not_going = Status "notgoing"
 status_invited = Status "invited"
 status_finished = Status "finished"
-
+status_invite = Status "invite"
 
 
 club_1 = Club 1 "Ortiz de Ocampo 1500" "Ocampo Futbol" "CABA" $ Location (-34.619883) (-58.508089)

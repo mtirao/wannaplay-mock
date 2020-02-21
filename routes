@@ -5,10 +5,11 @@
 /accounts/social/login       SocialLoginR POST
 /accounts/refresh            RefreshR POST
 
-/players/profile             ProfileR PUT GET
+/players/profile                           ProfileR PUT GET
 /players/games                             GamesR GET
 /players/games/finished                    FinishedGamesR GET
 /players/games/postulable                  PostulaleGamesR GET
+!/players/games/invite/#Int                InviteGamesR GET
 !/players/games/#Int                       GameDetailR GET
 /players/games/#Int/players                GamePlayersR GET
 
