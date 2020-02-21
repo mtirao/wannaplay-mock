@@ -10,6 +10,7 @@ module Games.Helper where
 import Games.Json
 import Games.Types
 import Fields.Types
+import Fields.Helper
 import Data.Text (Text)
 
 
@@ -35,8 +36,6 @@ club_1 = Club 1 "Ortiz de Ocampo 1500" "Ocampo Futbol" "CABA" $ Location (-34.61
 club_2 = Club 2 "Salguero 1500" "Salguero Futbol" "CABA" $ Location (-34.619883) (-58.508089)
 club_3 = Club 3 "Pedro Moran 3500" "Garden Futbol" "CABA" $ Location (-34.619883) (-58.508089)
 club_4 = Club 4 "Duarte Quiros 3500" "Belgrano Futbol" "Cordoba" $ Location (-34.619883) (-58.508089)
-
-field_1 = FieldObj 1 1000 10 100
 
 player_detail_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Tirao" "white" "Marcos" "marcos.tirao@icloud.com"
 player_detail_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Tirao" "black" "Agustin" "agustin.tirao@icloud.com"

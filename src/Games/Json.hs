@@ -42,14 +42,6 @@ instance ToJSON PlayerDetail where
         ,"username" .= username
         ]
 
-instance ToJSON FieldObj where
-    toJSON FieldObj {..} = object [
-        "id" .= field_id
-        ,"total_amount" .= total_amount
-        ,"max_players" .= max_players
-        ,"player_amount" .= player_amount
-        ]
-
 instance ToJSON Age where
     toJSON Age {..} = object [
         "min" .= range_min_age

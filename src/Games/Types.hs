@@ -48,13 +48,6 @@ data Club = Club {
     ,location :: Location
     }
 
-data FieldObj = FieldObj {
-    field_id :: Int
-    ,total_amount :: Int
-    ,max_players :: Int
-    ,player_amount :: Int
-    }
-
 data PlayerDetail = PlayerDetail {
     player_id :: Int
     ,profile_image_url :: Text
@@ -76,7 +69,7 @@ data Detail = Detail {
     ,age_range :: Age
     ,club :: Club
     ,start_time :: Text
-    ,field :: FieldObj
+    ,field :: Field
     ,detail_max_players :: Int
     ,genders :: Text
     ,players :: [Player]
