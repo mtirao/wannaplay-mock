@@ -42,6 +42,13 @@ data Profile = Profile
     , fair_play :: Double
     }
 
+data Notification = Notification
+    { wannaplay :: Bool
+    , news  :: Bool
+    , activity :: Bool
+    , chat  :: Bool
+    }
+
 instance ToJSON Score where
     toJSON Score {..} = object
         [ "value" .= value
@@ -75,10 +82,20 @@ instance ToJSON Profile where
         , "control" .= control
         , "fair_play" .= fair_play
         ]
+  
+instance ToJSON Notification where
+    toJSON Notification {..} = object
+        [ "wannaplay" .= wannaplay
+        , "news" .= news
+        , "activity" .= activity
+        , "chat" .= chat
+        ]
 
 score_1 = Score 4.3 "advanced"
 
 profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
+
+notification = Notification True True True True
 
 getProfileR  :: Handler Value
 getProfileR = returnJson $ profile
@@ -90,7 +107,10 @@ patchQualifyR :: Int -> Handler Value
 patchQualifyR id = returnJson $ profile
 
 patchNotificationR :: Handler Value
-patchNotificationR = returnJson $ profile
+patchNotificationR = returnJson $ notification
+
+getNotificationR :: Handler Value
+getNotificationR = returnJson $ notification
 
 postHelpR :: Handler Value
 postHelpR = returnJson $  Message "Ok"
