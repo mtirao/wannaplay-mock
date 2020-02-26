@@ -89,5 +89,8 @@ putProfileR = returnJson $ profile
 patchQualifyR :: Int -> Handler Value
 patchQualifyR id = returnJson $ profile
 
+patchNotificationR :: Handler Value
+patchNotificationR = returnJson $ profile
+
 postHelpR :: Handler Value
 postHelpR = returnJson $  Message "Ok"
