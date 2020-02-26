@@ -16,6 +16,10 @@ data Score = Score
     , text :: Text
 }
 
+data Message = Message 
+    {   message :: Text
+}
+
 data Profile = Profile
     { first_name :: Text
     , last_name  :: Text
@@ -42,6 +46,11 @@ instance ToJSON Score where
     toJSON Score {..} = object
         [ "value" .= value
         , "text" .= text
+        ]
+
+instance ToJSON Message where
+    toJSON Message {..} = object
+        [   "message" .= message
         ]
 
 instance ToJSON Profile where
@@ -79,3 +88,6 @@ putProfileR = returnJson $ profile
 
 patchQualifyR :: Int -> Handler Value
 patchQualifyR id = returnJson $ profile
+
+postHelpR :: Handler Value
+postHelpR = returnJson $  Message "Ok"

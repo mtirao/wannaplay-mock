@@ -38,3 +38,5 @@
 /players/fields/time/#Int                   TimesR GET
 
 /players/profile/qualify/#Int               QualifyR PATCH
+
+/player/profile/help                        HelpR POST
