@@ -77,3 +77,5 @@ getProfileR = returnJson $ profile
 putProfileR  :: Handler Value
 putProfileR = returnJson $ profile
 
+patchQualifyR :: Int -> Handler Value
+patchQualifyR id = returnJson $ profile
