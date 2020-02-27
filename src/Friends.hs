@@ -10,13 +10,11 @@ module Friends where
 import Foundation
 import Data.Text (Text)
 import Yesod.Core
-import Games.Types
-import Games.Json
-import Games.Helper
+import Profile
 
 data Friends = Friends
     { previous_friends :: Text
-    , results_friends :: [Player]
+    , results_friends :: [Profile]
     , count_friends  :: Int
     , next_friends :: Text
     }
@@ -29,48 +27,21 @@ instance ToJSON Friends where
         ,  "next" .= next_friends
         ]
 
-
-player_detail_player_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Marcos Player" "white" "Marcos" "marcos.tirao@icloud.com"
-player_detail_player_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Agustin Player" "black" "Agustin" "agustin.tirao@icloud.com"
-player_detail_player_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Juan Player" "white" "Juan" "juan.perez@icloud.com"
-player_detail_player_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Federico Player" "black" "Federico" "fede.gomez@icloud.com"
-player_detail_player_5 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fernando Player" "black" "Fernando" "fer.penna@icloud.com"
-player_detail_player_6 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True True "Fabio Player" "white" "Fabio" "fabio.perez@icloud.com"
-player_detail_player_7 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False True "Alejandro Player" "black" "Alejandro" "ale.fernandez@icloud.com"
-
-player_detail_suggest_1 = PlayerDetail 1 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Marcos Suggest" "white" "Marcos" "marcos.tirao@icloud.com"
-player_detail_suggest_2 = PlayerDetail 2 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Agustin Suggest" "black" "Agustin" "agustin.tirao@icloud.com"
-player_detail_suggest_3 = PlayerDetail 3 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Juan Suggest" "white" "Juan" "juan.perez@icloud.com"
-player_detail_suggest_4 = PlayerDetail 4 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Federico Suggest" "black" "Federico" "fede.gomez@icloud.com"
-player_detail_suggest_5 = PlayerDetail 6 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True False "Fernando Suggest" "black" "Fernando" "fer.penna@icloud.com"
-player_detail_suggest_6 = PlayerDetail 8 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" True False "Fabio Suggest" "white" "Fabio" "fabio.perez@icloud.com"
-player_detail_suggest_7 = PlayerDetail 9 "https://s3.amazonaws.com/wannaplayprofile/wannaplay-image.png" False False "Alejandro Suggest" "black" "Alejandro" "ale.fernandez@icloud.com"
+profile_1 =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
+profile_2 =  Profile "Agustin" "Tirao" "marcos.tirao@icloud.com" "midfield" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
+profile_3 =  Profile "Juan" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
+profile_4 =  Profile "Federico" "Tirao" "marcos.tirao@icloud.com" "midfield" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
+profile_5 =  Profile "Fabio" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
+profile_6 =  Profile "Alejandro" "Tirao" "marcos.tirao@icloud.com" "midfield" 43 "549153838570" "1977-01-12" "male" "" "" "" True score_1 5 5 5 5 5 5
 
 
-player_player_1 =  Player player_detail_player_1 status_confirmed
-player_player_2 =  Player player_detail_player_2 status_confirmed
-player_player_3 =  Player player_detail_player_3 status_confirmed
-player_player_4 =  Player player_detail_player_4 status_declined
-player_player_5 =  Player player_detail_player_5 status_declined
-player_player_6 =  Player player_detail_player_6 status_declined
-player_player_7 =  Player player_detail_player_7 status_confirmed
-
-player_suggest_1 =  Player player_detail_suggest_1 status_confirmed
-player_suggest_2 =  Player player_detail_suggest_2 status_confirmed
-player_suggest_3 =  Player player_detail_suggest_3 status_confirmed
-player_suggest_4 =  Player player_detail_suggest_4 status_declined
-player_suggest_5 =  Player player_detail_suggest_5 status_declined
-player_suggest_6 =  Player player_detail_suggest_6 status_declined
-player_suggest_7 =  Player player_detail_suggest_7 status_confirmed
-
-
-
+friend_list = Friends "" [profile_1, profile_2, profile_3, profile_4, profile_5, profile_6] 6 ""
 
 getFriendsR  :: Handler Value
-getFriendsR = returnJson $ Friends "" [player_1, player_2, player_3, player_4, player_5, player_6, player_7, player_8, player_9] 9 ""
+getFriendsR = returnJson $ friend_list
 
 getSuggestedR :: Handler Value
-getSuggestedR = returnJson $ Friends "" [player_suggest_1, player_suggest_2, player_suggest_3, player_suggest_4, player_suggest_5, player_suggest_6, player_suggest_7] 7 ""
+getSuggestedR = returnJson $ friend_list
 
 getPlayersR :: Handler Value
-getPlayersR = returnJson $ Friends "" [player_player_1, player_player_2, player_player_3, player_player_4, player_player_5, player_player_6, player_player_7] 7 ""
+getPlayersR = returnJson $ friend_list
