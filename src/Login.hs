@@ -21,6 +21,8 @@ data User = User
     , token :: Text
     , position :: Text
     , picture :: Text
+    , expired_at :: Text
+    , refresh :: Text
     }
 
 instance ToJSON User where
@@ -34,23 +36,25 @@ instance ToJSON User where
         , "token" .= token
         , "position" .= position
         , "picture" .= picture
+        , "expired_at" .= expired_at
+        , "refresh" .= refresh
         ]
 
 
 postLoginR  :: Handler Value
-postLoginR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" ""
+postLoginR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890"
 
 postSignUpR  :: Handler Value
-postSignUpR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" ""
+postSignUpR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890"
 
 postChangePasswordR  :: Handler Value
-postChangePasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" ""
+postChangePasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890"
 
 postResetPasswordR  :: Handler Value
-postResetPasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" ""
+postResetPasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890"
 
 postSocialLoginR  :: Handler Value
-postSocialLoginR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" ""
+postSocialLoginR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890"
 
 postRefreshR  :: Handler Value
-postRefreshR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" ""
+postRefreshR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890"
