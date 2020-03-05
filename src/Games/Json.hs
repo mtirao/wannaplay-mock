@@ -59,6 +59,7 @@ instance ToJSON Detail where
         , "genders" .= genders
         , "players" .= players
         , "created_by" .= created_by
+        , "chat_id" .= chat_id
         ]
 
 instance ToJSON Games where
