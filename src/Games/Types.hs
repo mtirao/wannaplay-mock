@@ -45,7 +45,16 @@ data Club = Club {
     ,street_address :: Text
     ,name :: Text
     ,city :: Text
+    ,city_area :: Text
     ,location :: Location
+    ,images :: [Text]
+    ,services :: [Service]
+    ,description :: Text
+    ,primary_phone :: Text
+    ,secondary_phone :: Text
+    ,country :: Text
+    ,country_area :: Text
+    ,postal_code :: Text
     }
 
 data PlayerDetail = PlayerDetail {

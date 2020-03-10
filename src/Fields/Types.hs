@@ -29,18 +29,26 @@ data Location = Location
     , longitude :: Double
     }
 
+data DepField = 
+    { name :: Text
+    , material :: Text
+    , id :: Int
+    }   
+
+data Service = Service 
+    {code :: Text
+    , description :: Text
+    }
+
 data Field = Field
     { name :: Text
-    , city :: Text
-    , address  :: Text
-    , phone :: Text
-    , cell_phone :: Text
-    , url :: Text
-    , amenities :: [Text]
-    , field_type :: FieldType
-    , score :: Int
+    , material :: Text
+    , max_players  :: Int
+    , total_amount :: Float
+    , services :: [Service]
+    , depending_fields :: [DepField]
     , id :: Int
-    , location :: Location
+    , club_id :: Int
     }
 
 

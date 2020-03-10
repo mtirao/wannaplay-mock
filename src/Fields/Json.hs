@@ -15,16 +15,14 @@ import Yesod.Core
 instance ToJSON Field  where
     toJSON Field {..} = object
         [ "name" .= name
-        , "city" .= city
-        , "address" .= address
-        , "phone" .= phone
+        ,"material" .= material
+        , "max_players" .= max_players
+        , "total_amount" .= toal_amount
+        , "services" .= services
+        , "depending_fields" .= depending_fields
         , "cell_phone" .= cell_phone
-        , "url" .= url
-        , "amenities" .= amenities
-        , "field_type" .= field_type
-        , "score" .= score
         , "id" .= id
-        , "location" .= location
+        , "club_id" .= club_id
         ]
 
 instance ToJSON Time  where
@@ -52,4 +50,17 @@ instance ToJSON Fields where
         ,  "count" .= count
         ,  "next" .= next
         ]
-        
+
+instance ToJSON DepField where 
+    toJSON DepField {..} = object
+        ["name" .= name
+        ,"material" .= material
+        ,"id" .= id
+        ]
+
+instance ToJSON Service where
+    toJSON Service {..} = object
+        ["code" .= code
+        ,"description" .= description
+        ]
+
