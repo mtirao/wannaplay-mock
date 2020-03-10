@@ -83,6 +83,7 @@ data Detail = Detail {
     ,genders :: Text
     ,players :: [Player]
     ,created_by :: Text
+    ,chat_id :: Text
     }
 
 data Assets = Assets {
