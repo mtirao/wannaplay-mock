@@ -17,10 +17,9 @@ instance ToJSON Field  where
         [ "name" .= name
         ,"material" .= material
         , "max_players" .= max_players
-        , "total_amount" .= toal_amount
+        , "total_amount" .= total_amount
         , "services" .= services
         , "depending_fields" .= depending_fields
-        , "cell_phone" .= cell_phone
         , "id" .= id
         , "club_id" .= club_id
         ]
@@ -51,11 +50,19 @@ instance ToJSON Fields where
         ,  "next" .= next
         ]
 
+instance ToJSON Clubs where
+    toJSON Clubs {..} = object
+        [ "previous" .= previous_club
+        , "results" .= results_club
+        ,  "count" .= count_club
+        ,  "next" .= next_club
+        ]
+
 instance ToJSON DepField where 
     toJSON DepField {..} = object
-        ["name" .= name
-        ,"material" .= material
-        ,"id" .= id
+        ["name" .= name_dep_field
+        ,"material" .= material_dep_field
+        ,"id" .= id_dep_field
         ]
 
 instance ToJSON Service where
@@ -64,3 +71,19 @@ instance ToJSON Service where
         ,"description" .= description
         ]
 
+instance ToJSON Club where
+    toJSON Club {..} = object [
+        "id" .= id_club
+        ,"street_address" .= street_address
+        ,"name" .= name_club
+        ,"city" .= city
+        ,"city_area" .= city_area
+        ,"services" .= services_club
+        ,"description" .= description_club
+        ,"primary_phone" .= primary_phone
+        ,"secondary_phone" .= secondary_phone
+        ,"country" .= country
+        ,"country_area" .= country_area
+        ,"postal_code" .= postal_code
+        ,"location" .= location
+        ]

@@ -18,7 +18,7 @@ import Yesod.Core
 
 
 getFieldsR  :: Handler Value
-getFieldsR  = returnJson $ Fields "" [field_1, field_2, field_3, field_4, field_5, field_6, field_7] 10 ""
+getFieldsR  = returnJson $ Clubs "" [club_1, club_2, club_3, club_4] 4 ""
 
 getTimesR  :: Int -> Handler Value
 getTimesR _ = returnJson $ time_1

@@ -15,15 +15,6 @@ import Fields.Types
 import Fields.Json
 
 
-instance ToJSON Club where
-    toJSON Club {..} = object [
-        "id" .= club_id
-        ,"street_address" .= street_address
-        ,"name" .= name
-        ,"city" .= city
-        ,"location" .= location
-        ]
-
 instance ToJSON Player where
     toJSON Player {..} = object [
         "player" .= player

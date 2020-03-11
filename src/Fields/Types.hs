@@ -19,6 +19,13 @@ data Fields = Fields
     , next :: Text
     }
 
+data Clubs = Clubs
+    { previous_club :: Text
+    , results_club :: [Club]
+    , count_club  :: Int
+    , next_club :: Text
+    }
+
 data FieldType = FieldType 
     { sport :: Text
     , players :: [Int]
@@ -29,10 +36,10 @@ data Location = Location
     , longitude :: Double
     }
 
-data DepField = 
-    { name :: Text
-    , material :: Text
-    , id :: Int
+data DepField = DepField
+    { name_dep_field :: Text
+    , material_dep_field :: Text
+    , id_dep_field :: Int
     }   
 
 data Service = Service 
@@ -51,8 +58,23 @@ data Field = Field
     , club_id :: Int
     }
 
-
-
 data Time = Time 
     { available_time :: [Text]
+    }
+
+data Club = Club {
+    id_club :: Int
+    ,street_address :: Text
+    ,name_club :: Text
+    ,city :: Text
+    ,city_area :: Text
+    ,location :: Location
+    ,images :: [Text]
+    ,services_club :: [Service]
+    ,description_club :: Text
+    ,primary_phone :: Text
+    ,secondary_phone :: Text
+    ,country :: Text
+    ,country_area :: Text
+    ,postal_code :: Text
     }

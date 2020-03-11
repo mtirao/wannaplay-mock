@@ -40,23 +40,6 @@ data Age = Age {
     ,range_max_age  :: Int
     }
 
-data Club = Club {
-    club_id :: Int
-    ,street_address :: Text
-    ,name :: Text
-    ,city :: Text
-    ,city_area :: Text
-    ,location :: Location
-    ,images :: [Text]
-    ,services :: [Service]
-    ,description :: Text
-    ,primary_phone :: Text
-    ,secondary_phone :: Text
-    ,country :: Text
-    ,country_area :: Text
-    ,postal_code :: Text
-    }
-
 data PlayerDetail = PlayerDetail {
     player_id :: Int
     ,profile_image_url :: Text
