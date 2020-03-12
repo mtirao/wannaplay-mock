@@ -36,12 +36,6 @@ data Location = Location
     , longitude :: Double
     }
 
-data DepField = DepField
-    { name_dep_field :: Text
-    , material_dep_field :: Text
-    , id_dep_field :: Int
-    }   
-
 data Service = Service 
     {code :: Text
     , description :: Text
@@ -53,7 +47,6 @@ data Field = Field
     , max_players  :: Int
     , total_amount :: Float
     , services :: [Service]
-    , depending_fields :: [DepField]
     , id :: Int
     , club_id :: Int
     }

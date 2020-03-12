@@ -19,7 +19,6 @@ instance ToJSON Field  where
         , "max_players" .= max_players
         , "total_amount" .= total_amount
         , "services" .= services
-        , "depending_fields" .= depending_fields
         , "id" .= id
         , "club_id" .= club_id
         ]
@@ -56,13 +55,6 @@ instance ToJSON Clubs where
         , "results" .= results_club
         ,  "count" .= count_club
         ,  "next" .= next_club
-        ]
-
-instance ToJSON DepField where 
-    toJSON DepField {..} = object
-        ["name" .= name_dep_field
-        ,"material" .= material_dep_field
-        ,"id" .= id_dep_field
         ]
 
 instance ToJSON Service where
