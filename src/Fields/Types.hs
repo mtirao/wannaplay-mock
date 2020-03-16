@@ -70,4 +70,5 @@ data Club = Club {
     ,country :: Text
     ,country_area :: Text
     ,postal_code :: Text
+    ,is_wannaplay :: Bool
     }

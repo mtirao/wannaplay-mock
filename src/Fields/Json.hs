@@ -78,4 +78,5 @@ instance ToJSON Club where
         ,"country_area" .= country_area
         ,"postal_code" .= postal_code
         ,"location" .= location
+        ,"is_wannaplay" .= is_wannaplay
         ]

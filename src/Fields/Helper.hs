@@ -36,7 +36,7 @@ field_5 = Field "El Protrero Soccer 1" "cesped" 8 100.10 [service_1] 5 5
 field_6 = Field "El Protrero Soccer 1" "cesped" 8 100.10 [service_1] 6 6 
 field_7 = Field "El Protrero Soccer 1" "cesped" 8 100.10 [service_1] 7 7 
 
-club_1 = Club 1 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417"
-club_2 = Club 2 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417"
-club_3 = Club 3 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417"
-club_4 = Club 4 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417"
+club_1 = Club 1 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417" True
+club_2 = Club 2 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417" False
+club_3 = Club 3 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417" True 
+club_4 = Club 4 "Ortiz de Ocampo 1500" "Ocampo Futbol" "Vicente Lopez" "Buenos Aires"  location_1 [] [service_1] "bla bla" "12345678" "12345678" "AR" "Argentina" "1417" False
