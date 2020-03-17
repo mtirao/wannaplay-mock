@@ -67,6 +67,7 @@ data Detail = Detail {
     ,players :: [Player]
     ,created_by :: Text
     ,chat_id :: Text
+    ,distance :: Int
     }
 
 data Assets = Assets {

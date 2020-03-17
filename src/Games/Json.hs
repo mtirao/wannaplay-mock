@@ -51,6 +51,7 @@ instance ToJSON Detail where
         , "players" .= players
         , "created_by" .= created_by
         , "chat_id" .= chat_id
+        , "distance" .= distance
         ]
 
 instance ToJSON Games where
