@@ -29,6 +29,7 @@
 !/players/games/#Int/postulate             GameOwnPostulatedR PATCH
 
 /players/friends                           FriendsR GET
+!/players/friends/#Int                     AddFriendsR POST
 /players/suggested                         SuggestedR GET
 /players/players                           PlayersR GET
 
