@@ -11,6 +11,7 @@ import Foundation
 import Data.Text (Text)
 import Yesod.Core
 import Profile
+import Network.HTTP.Types
 
 data Friends = Friends
     { previous_friends :: Text
@@ -67,3 +68,6 @@ getPlayersR = returnJson $ players_list
 
 postAddFriendsR  :: Int -> Handler Value
 postAddFriendsR playerId = returnJson $ profile_1
+
+deleteAddFriendsR  :: Int -> Handler Value
+deleteAddFriendsR playerId = returnJson $ profile_1
