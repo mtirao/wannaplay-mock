@@ -118,3 +118,6 @@ getNotificationR = returnJson $ notification
 
 postHelpR :: Handler Value
 postHelpR = returnJson $  Message "Ok"
+
+postDeviceR :: Handler Value
+postDeviceR = returnJson $  Message "Ok"

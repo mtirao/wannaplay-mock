@@ -22,7 +22,7 @@
 /players/#Int/games/#Int/cancel            GameCancelR PATCH
 /players/#Int/games/#Int/postulate         GamePostulateR PATCH
 
-/players/game/create                       GameCreateR POST
+/players/games/create                       GameCreateR POST
 
 !/players/games/#Int/confirm               GameOwnConfirmR PATCH
 !/players/games/#Int/cancel                GameOwnCancelR PATCH
@@ -43,3 +43,5 @@
 /players/profile/notification               NotificationR GET PATCH
 
 /player/profile/help                        HelpR POST
+
+/players/device                            DeviceR POST
