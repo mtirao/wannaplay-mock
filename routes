@@ -44,4 +44,4 @@
 
 /player/profile/help                        HelpR POST
 
-/players/device                            DeviceR POST
+/players/device                            DeviceR POST DELETE

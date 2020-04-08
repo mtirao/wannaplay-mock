@@ -121,3 +121,6 @@ postHelpR = returnJson $  Message "Ok"
 
 postDeviceR :: Handler Value
 postDeviceR = returnJson $  Message "Ok"
+
+deleteDeviceR :: Handler Value
+deleteDeviceR = returnJson $  Message "Ok"
