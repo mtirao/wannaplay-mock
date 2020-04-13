@@ -109,3 +109,6 @@ postGameCreateR = returnJson $ game_3
 
 patchGameCaptainR :: Int -> Int -> Handler Value
 patchGameCaptainR game_id player_id = returnJson $ game_1
+
+putGamePlayersR :: Int -> Handler Value
+putGamePlayersR game_id = returnJson $ game_1

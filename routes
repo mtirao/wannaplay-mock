@@ -11,7 +11,7 @@
 /players/games/postulable                  PostulaleGamesR GET
 !/players/games/invite/#Int                InviteGamesR GET
 !/players/games/#Int                       GameDetailR GET
-/players/games/#Int/players                GamePlayersR GET
+/players/games/#Int/players                GamePlayersR PUT GET
 
 /players/games/#Int/color                  GameColorR PATCH
 /players/games/#Int/multimedia             GameMutimediaR GET
