@@ -40,7 +40,7 @@ data Profile = Profile
     , players :: Int
     , control :: Double
     , fair_play :: Double
-    , chat_id :: Text
+    , chat_id :: Integer
     , id :: Int
     }
 

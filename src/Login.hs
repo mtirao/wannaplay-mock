@@ -26,7 +26,7 @@ data User  = User
     , picture :: Text
     , expired_at :: Text
     , refresh :: Text
-    , chat_id :: Text
+    , chat_id :: Integer
     } 
 
 instance ToJSON User where
@@ -67,12 +67,12 @@ instance ToJSON UserError where
         ]
        
 
-login_1 = User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "marcos.tirao@icloud.com"
-login_2 = User "Camila" "Barber Clas" "Camila Barber Clas" "cbarberclas@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "cbarberclas@wannaplay.club"
-login_3 = User "Leila" "Feiguin" "Leila Feiguin" "lfeiguin@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "lfeiguin@wannaplay.club"
-login_4 = User "Ariel" "Galliano" "Ariel Galliano" "agalliano@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "agalliano@wannaplay.club"
-login_5 = User "Juan" "Gargiulo" "Ariel Galliano" "jgargiulo@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "jgargiulo@wannaplay.club"
-login_6 = User "Franco" "Nisi" "Ariel Galliano" "fnisi@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "fnisi@wannaplay.club"
+login_1 = User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "2"
+login_2 = User "Camila" "Barber Clas" "Camila Barber Clas" "cbarberclas@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "3"
+login_3 = User "Leila" "Feiguin" "Leila Feiguin" "lfeiguin@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "4"
+login_4 = User "Ariel" "Galliano" "Ariel Galliano" "agalliano@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "5"
+login_5 = User "Juan" "Gargiulo" "Ariel Galliano" "jgargiulo@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "6"
+login_6 = User "Franco" "Nisi" "Ariel Galliano" "fnisi@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "7"
 
 
 users = [login_1, login_2, login_3, login_4, login_5, login_6]
