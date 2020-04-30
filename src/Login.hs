@@ -67,12 +67,12 @@ instance ToJSON UserError where
         ]
        
 
-login_1 = User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "2"
-login_2 = User "Camila" "Barber Clas" "Camila Barber Clas" "cbarberclas@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "3"
-login_3 = User "Leila" "Feiguin" "Leila Feiguin" "lfeiguin@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "4"
-login_4 = User "Ariel" "Galliano" "Ariel Galliano" "agalliano@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "5"
-login_5 = User "Juan" "Gargiulo" "Ariel Galliano" "jgargiulo@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "6"
-login_6 = User "Franco" "Nisi" "Ariel Galliano" "fnisi@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "7"
+login_1 = User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 2
+login_3 = User "Leila" "Feiguin" "Leila Feiguin" "lfeiguin@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 4
+login_4 = User "Ariel" "Galliano" "Ariel Galliano" "agalliano@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 5
+login_5 = User "Juan" "Gargiulo" "Ariel Galliano" "jgargiulo@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 6
+login_6 = User "Franco" "Nisi" "Ariel Galliano" "fnisi@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 7
+login_2 = User "Camila" "Barber Clas" "Barber Clas" "fnisi@wannaplay.club" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 3
 
 
 users = [login_1, login_2, login_3, login_4, login_5, login_6]
@@ -88,16 +88,16 @@ postLoginR = do
 
 
 postSignUpR  :: Handler Value
-postSignUpR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "marcos.tirao@icloud.com"
+postSignUpR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 1
 
 postChangePasswordR  :: Handler Value
-postChangePasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "marcos.tirao@icloud.com"
+postChangePasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 1
 
 postResetPasswordR  :: Handler Value
-postResetPasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "marcos.tirao@icloud.com"
+postResetPasswordR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 1
 
 postSocialLoginR  :: Handler Value
-postSocialLoginR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "marcos.tirao@icloud.com"
+postSocialLoginR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 1
 
 postRefreshR  :: Handler Value
-postRefreshR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" "marcos.tirao@icloud.com"
+postRefreshR = returnJson $ User "Marcos" "Tirao" "Marcos Tirao" "marcos.tirao@icloud.com" Nothing "JWT" "12345677890" "goalkeeper" "" "2030-07-16T19:20:30.45+01:00" "12345677890" 1
