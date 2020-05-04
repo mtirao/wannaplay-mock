@@ -40,7 +40,7 @@ data Profile = Profile
     , players :: Int
     , control :: Double
     , fair_play :: Double
-    , chat_id :: Integer
+    , chat_id :: Text
     , id :: Int
     }
 
@@ -97,7 +97,7 @@ instance ToJSON Notification where
 
 score_1 = Score 4.3 "advanced"
 
-profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "Vicente Lopez, Buenos Aires Argentina." "Jugador creativo en epoca de crisis, fanatico del futbol y las buenas costumbres" True score_1 5 5 5 5 5 5 3 1
+profile =  Profile "Marcos" "Tirao" "marcos.tirao@icloud.com" "goalkeeper" 43 "549153838570" "1977-01-12" "male" "" "Vicente Lopez, Buenos Aires Argentina." "Jugador creativo en epoca de crisis, fanatico del futbol y las buenas costumbres" True score_1 5 5 5 5 5 5 "3" 1
 
 notification = Notification True True True True
 
